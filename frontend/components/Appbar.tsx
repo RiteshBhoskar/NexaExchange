@@ -1,7 +1,7 @@
 "use client"
 
 import { signIn, signOut, useSession } from "next-auth/react"
-import AuthButton from "./Buttons";
+import { AuthButton } from "./Buttons";
 
 export default function Appbar () {
     const session = useSession();
@@ -12,7 +12,7 @@ export default function Appbar () {
                 className="size-9" />
                 <h1 className="text-lg font-sans pl-2">NexaExchange</h1>
             </div>
-            <div className="flex justify-center items-center pt-2 pr-3">
+            <div className="flex justify-center items-center pr-3">
                 {session.data?.user ? <AuthButton onClick={() => signOut()}>
                     Logout
                 </AuthButton> : <AuthButton onClick={() => signIn()}>

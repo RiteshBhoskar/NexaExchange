@@ -55,7 +55,18 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		fontFamily: {
+			cabinet: [ "Cabinet Grotesk", "sans-serif"]
+		},
+		fontWeight: {
+			thin: "100",
+			extraLight: "200",
+			light: "300",
+            normal: "400",
+            medium: "500",
+            bold: "700",
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
